@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import FaqAccordion from "@/components/FaqAccordion";
+import FaqBackground from "@/components/FaqBackground";
 import ContactForm from "@/components/ContactForm";
 import { SITE_EMAIL, socialLinks } from "@/data/site";
 
@@ -41,7 +42,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="px-5 py-16 md:px-10 md:py-24">
+      <section className="relative px-5 py-16 md:px-10 md:py-24">
+        <FaqBackground />
         <div className="grid gap-8 md:grid-cols-2">
           <Reveal>
             <h2 className="text-4xl md:text-6xl">FAQ.</h2>

@@ -8,6 +8,7 @@ import SectionLabel from "@/components/SectionLabel";
 import ProjectCard from "@/components/ProjectCard";
 import StatsRow from "@/components/StatsRow";
 import FaqAccordion from "@/components/FaqAccordion";
+import FaqBackground from "@/components/FaqBackground";
 import BlogCard from "@/components/BlogCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import SplitReveal from "@/components/SplitReveal";
@@ -146,7 +147,8 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="px-5 py-16 md:px-10 md:py-24">
+      <section className="relative px-5 py-16 md:px-10 md:py-24">
+        <FaqBackground />
         <div className="grid gap-8 md:grid-cols-2">
           <Reveal>
             <h2 className="text-4xl md:text-6xl">FAQ.</h2>

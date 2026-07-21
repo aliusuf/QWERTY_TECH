@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="flex items-center justify-between px-5 py-4 md:px-10 md:py-6">
+      <div className="relative z-50 flex items-center justify-between px-5 py-4 md:px-10 md:py-6">
         <Link
           href="/"
           onClick={() => setOpen(false)}
