@@ -28,11 +28,11 @@ export default function Home() {
 
         <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
           <h1 className="text-[15vw] leading-[0.95] tracking-tight sm:text-[10vw] md:text-[7rem] lg:text-[8rem]">
-            <SplitReveal text="QWERTY TECH" as="span" />
+            <SplitReveal text="QWERTY TECK" as="span" />
             <span className="align-top text-[0.4em]">®</span>
           </h1>
           <FadeInText delay={0.6} className="mt-6 max-w-md text-body md:text-lg">
-            Creative studio based in Gotham.
+            Creative studio based in Dubai.
           </FadeInText>
         </div>
 
@@ -47,8 +47,7 @@ export default function Home() {
       <section className="px-5 py-16 md:px-10 md:py-24">
         <Reveal>
           <h2 className="mx-auto max-w-3xl text-center text-3xl md:text-5xl">
-            We&rsquo;re QWERTY TECH® — a creative studio cultivating bold
-            brands, beautiful websites, and ideas that refuse to be ordinary.
+            We&rsquo;re QWERTY TECK® — a Dubai creative studio building bold brands, refined websites, and ideas with the audacity to be unforgettable.
           </h2>
         </Reveal>
         <Reveal delay={0.1} className="mt-14">
