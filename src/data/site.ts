@@ -20,37 +20,37 @@ export const services = [
     code: "001",
     title: "BRANDING",
     description:
-      "We build brands with a backbone — logos, systems, and stories people actually remember. Not decoration. Identity with a point of view.",
+      "We build brands with a backbone — logos, systems, and stories people actually remember.",
   },
   {
     code: "002",
     title: "DEVELOPMENT",
     description:
-      "Websites that are as fast as they are beautiful. Built with purpose, engineered with precision, and made to perform long after launch day.",
+      "Websites that are as fast as they are beautiful. Built with purpose, engineered and made to perform.",
   },
   {
     code: "003",
     title: "SEO OPTIMIZATION",
     description:
-      "Get found by the people already looking for you. Tailored SEO backed by real data — not guesswork, not jargon.",
+      "Get found by the people already looking for you. Tailored SEO backed by real data.",
   },
   {
     code: "004",
     title: "SOCIAL MEDIA",
     description:
-      "We plan, post, and grow your presence across every platform with intent. Content that earns attention instead of chasing it.",
+      "We plan, post, and grow your presence across every platform with intent.",
   },
   {
     code: "005",
     title: "UI/UX DESIGN",
     description:
-      "Intuitive, human-centred interfaces that make every interaction feel effortless — and every visitor feel understood.",
+      "Intuitive, human-centred interfaces that make every interaction feel effortless.",
   },
   {
     code: "006",
     title: "GRAPHIC DESIGN",
     description:
-      "Bold visual assets — from packaging to pitch decks — that carry your brand everywhere it needs to go, without losing an ounce of quality.",
+      "Bold visual assets, from packaging to pitch decks, that carry your brand everywhere it needs to go.",
   },
   {
     code: "007",

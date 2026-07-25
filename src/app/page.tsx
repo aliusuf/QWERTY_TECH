@@ -59,10 +59,7 @@ export default function Home() {
       <section className="px-5 py-16 md:px-10 md:py-24">
         <Reveal>
           <h2 className="mx-auto max-w-3xl text-center text-3xl md:text-5xl">
-            We&rsquo;re a creative studio in Dubai for founders and brands
-            who&rsquo;d rather lead than follow. We shape identities,
-            websites, and content that look considered, feel intentional, and
-            are built to last longer than a trend cycle.
+            We&rsquo;re QWERTY TECK® — a Dubai creative studio building bold brands, refined websites, and ideas with the audacity to be unforgettable.
           </h2>
         </Reveal>
       </section>
