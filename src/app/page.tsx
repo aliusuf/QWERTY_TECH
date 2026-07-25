@@ -10,11 +10,12 @@ import StatsRow from "@/components/StatsRow";
 import FaqAccordion from "@/components/FaqAccordion";
 import FaqBackground from "@/components/FaqBackground";
 import BlogCard from "@/components/BlogCard";
+import TestimonialCard from "@/components/TestimonialCard";
 import SplitReveal from "@/components/SplitReveal";
 import FadeInText from "@/components/FadeInText";
 import { projects } from "@/data/projects";
 import { posts } from "@/data/blog";
-import { socialLinks } from "@/data/site";
+import { testimonials, reviewImages, socialLinks } from "@/data/site";
 
 export default function Home() {
   return (
@@ -135,6 +136,35 @@ export default function Home() {
           <Reveal delay={0.15}>
             <StatsRow />
           </Reveal>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="bg-mist px-5 py-8 md:px-10 md:py-16">
+        <Reveal>
+          <div className="mx-auto max-w-[600px] pb-6 text-center">
+            <SectionLabel>TESTIMONIALS</SectionLabel>
+            <h2 className="mt-3 text-4xl md:text-6xl">
+              Trusted by brands who aren&rsquo;t afraid to stand out.
+            </h2>
+          </div>
+        </Reveal>
+        <div className="flex flex-col gap-6">
+          {testimonials.map((t, i) => (
+            <Reveal
+              key={t.name}
+              delay={i * 0.08}
+              className="sticky top-20"
+              style={{ zIndex: i + 1 }}
+            >
+              <TestimonialCard
+                quote={t.quote}
+                name={t.name}
+                role={t.role}
+                image={reviewImages[i]}
+              />
+            </Reveal>
+          ))}
         </div>
       </section>
 
