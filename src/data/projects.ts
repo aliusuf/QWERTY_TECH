@@ -57,25 +57,6 @@ export const projects: Project[] = [
     url: "https://emeraldsrx.com/",
   },
   {
-    slug: "lunar",
-    name: "LUNAR+",
-    code: "10.25",
-    scope: "Branding, UI",
-    timeline: "4 weeks",
-    year: "10.25",
-    description:
-      "Lunar is a vintage marketplace with a passion for unique, character-rich pieces. As their audience evolved, they needed a brand and digital presence that felt fresh, expressive, and culturally relevant. We partnered with Flea to reimagine their identity and craft a bold, story-driven website experience.",
-    challenge:
-      "Lunar needed to reposition its brand for a younger, style-conscious audience while keeping its roots in vintage culture. Their existing digital presence felt outdated and lacked a cohesive identity, making it hard to connect with modern shoppers seeking character-driven, curated finds.",
-    cover: `${CDN}/6904ca4ca4adf17196559072_6901774535a5cf76233a6506_work-img-02.png`,
-    logo: `${CDN}/6904ca4ba4adf1719655900a_6901774d9cabe38dd2ff62fd_project-logo-02.svg`,
-    gallery: [
-      `${CDN}/6904ca4ba4adf17196559017_6901776ee95ca441c771677c_project-02-img-01.jpeg`,
-      `${CDN}/6904ca4ba4adf17196559014_690177716a7cdeb8453a7dbf_project-02-img-02.jpeg`,
-      `${CDN}/6904ca4ba4adf17196559011_690177799eebe45594ff1164_project-02-img-03.jpeg`,
-    ],
-  },
-  {
     slug: "kroma",
     name: "KROMA",
     code: "11.25",
