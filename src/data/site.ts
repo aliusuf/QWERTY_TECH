@@ -1,5 +1,5 @@
-export const SITE_NAME = "QWERTY TECH";
-export const SITE_EMAIL = "hi@qwertytech.io";
+export const SITE_NAME = "QWERTY TECk";
+export const SITE_EMAIL = "hello@qwertyteck.com";
 
 export const navLinks = [
   { label: "Homepage", href: "/", code: "01" },
@@ -11,7 +11,7 @@ export const navLinks = [
 
 export const socialLinks = [
   { label: "BE", href: "https://www.behance.net" },
-  { label: "DR", href: "https://dribbble.com" },
+  // { label: "DR", href: "https://dribbble.com" },
   { label: "X", href: "https://x.com" },
 ];
 
