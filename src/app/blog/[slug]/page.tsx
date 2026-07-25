@@ -16,7 +16,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = getPost(slug);
-  return { title: post ? `${post.title} — QWERTY TECH` : "Blog — QWERTY TECH" };
+  return { title: post ? `${post.title} — QWERTY TECK` : "Blog — QWERTY TECK" };
 }
 
 export default async function BlogPostPage({

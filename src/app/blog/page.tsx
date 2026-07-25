@@ -4,7 +4,7 @@ import BlogCard from "@/components/BlogCard";
 import { posts } from "@/data/blog";
 
 export const metadata: Metadata = {
-  title: "Blog — QWERTY TECH",
+  title: "Blog — QWERTY TECK",
 };
 
 export default function BlogPage() {

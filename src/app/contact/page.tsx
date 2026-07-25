@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 import { SITE_EMAIL, socialLinks } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Contact — QWERTY TECH",
+  title: "Contact — QWERTY TECK",
 };
 
 export default function ContactPage() {

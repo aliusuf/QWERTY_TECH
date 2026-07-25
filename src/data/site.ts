@@ -86,19 +86,19 @@ export const stats = [
 export const testimonials = [
   {
     quote:
-      "Working with QWERTY TECH felt like hiring a creative greenhouse for our ideas. Everything grew faster and brighter than we imagined.",
+      "Working with QWERTY TECK felt like hiring a creative greenhouse for our ideas. Everything grew faster and brighter than we imagined.",
     name: "Sarah Conor",
     role: "Founder, Clonify",
   },
   {
     quote:
-      "Working with QWERTY TECH was a game-changer. They didn't just design our brand — they captured its soul. Everything feels elevated, intentional, and totally us.",
+      "Working with QWERTY TECK was a game-changer. They didn't just design our brand — they captured its soul. Everything feels elevated, intentional, and totally us.",
     name: "Bruce Lee",
     role: "Design Director, Maiz",
   },
   {
     quote:
-      "From concept to launch, the QWERTY TECH team delivered with clarity, creativity, and style. We've never looked more professional — or more ourselves.",
+      "From concept to launch, the QWERTY TECK team delivered with clarity, creativity, and style. We've never looked more professional — or more ourselves.",
     name: "John Headphone",
     role: "UFO, Marcom",
   },

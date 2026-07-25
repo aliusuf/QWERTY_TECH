@@ -16,6 +16,25 @@ const CDN = "https://cdn.prod.website-files.com/6904c82b580f53df25dddd39";
 
 export const projects: Project[] = [
   {
+    slug: "emerald",
+    name: "EMERALD",
+    code: "08.26",
+    scope: "Branding, Web Design",
+    timeline: "6 weeks",
+    year: "08.26",
+    description:
+      "Emerald Compounding Pharmacy needed more than a logo — they needed a brand that felt as precise and trustworthy as the medications they prepare. We partnered with the emeraldsrx.com team to build an identity and website that puts patient care front and center, from the wordmark down to the label on every bottle.",
+    challenge:
+      "Compounding pharmacy is a highly technical, trust-driven field, and Emerald's old presence read more like a lab supplier than a healthcare partner. Patients and prescribing physicians needed to feel confident at a glance, so the brand had to communicate precision and warmth in equal measure — never clinical and cold, never soft and vague.",
+    cover: "/projects/emerald/cover.png",
+    logo: "/projects/emerald/logo.png",
+    gallery: [
+      "/projects/emerald/gallery-1.png",
+      "/projects/emerald/gallery-2.png",
+      "/projects/emerald/gallery-3.png",
+    ],
+  },
+  {
     slug: "things",
     name: "THINGS®",
     code: "07.25",

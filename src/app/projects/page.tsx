@@ -5,7 +5,7 @@ import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Projects — QWERTY TECH",
+  title: "Projects — QWERTY TECK",
 };
 
 export default function ProjectsPage() {

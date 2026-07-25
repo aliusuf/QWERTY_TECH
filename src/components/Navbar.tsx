@@ -16,7 +16,7 @@ export default function Navbar() {
           href="/"
           onClick={() => setOpen(false)}
           className="flex h-9 w-9 items-center justify-center rounded-full border border-line bg-paper/80 backdrop-blur"
-          aria-label="QWERTY TECH home"
+          aria-label="QWERTY TECK home"
         >
           <QMark className="h-2.5 w-auto text-ink" />
         </Link>

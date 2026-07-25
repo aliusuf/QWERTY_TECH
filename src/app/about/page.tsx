@@ -5,7 +5,7 @@ import SectionLabel from "@/components/SectionLabel";
 import { team, awards } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "About — QWERTY TECH",
+  title: "About — QWERTY TECK",
 };
 
 export default function AboutPage() {
@@ -14,7 +14,7 @@ export default function AboutPage() {
       <section className="px-5 pb-16 pt-32 md:px-10 md:pt-40">
         <Reveal>
           <h1 className="max-w-3xl text-4xl md:text-6xl">
-            We&rsquo;re QWERTY TECH® — a creative studio cultivating bold
+            We&rsquo;re QWERTY TECK® — a creative studio cultivating bold
             brands, beautiful websites, and ideas that refuse to be ordinary.
           </h1>
         </Reveal>

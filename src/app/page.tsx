@@ -23,7 +23,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden px-5 pb-8 pt-32 md:px-10 md:pt-40">
         <span className="p-mono absolute left-5 top-1/2 hidden -translate-y-1/2 -rotate-90 text-slate md:left-8 md:block">
-          ( DXB )
+          ( DXB              )
         </span>
 
         <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
@@ -102,7 +102,7 @@ export default function Home() {
       <section className="px-5 py-20 md:px-10 md:py-32">
         <Reveal>
           <h2 className="max-w-3xl text-3xl md:text-5xl">
-            QWERTY TECH is a creative studio shaping bold brands and daring
+            QWERTY TECK is a creative studio shaping bold brands and daring
             ideas.
           </h2>
         </Reveal>

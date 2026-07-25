@@ -18,7 +18,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const project = getProject(slug);
-  return { title: project ? `${project.name} — QWERTY TECH` : "Project — QWERTY TECH" };
+  return { title: project ? `${project.name} — QWERTY TECK` : "Project — QWERTY TECK" };
 }
 
 export default async function ProjectDetailPage({
