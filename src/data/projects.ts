@@ -17,6 +17,26 @@ const CDN = "https://cdn.prod.website-files.com/6904c82b580f53df25dddd39";
 
 export const projects: Project[] = [
   {
+    slug: "solar-energies",
+    name: "SOLAR ENERGIES",
+    code: "09.26",
+    scope: "Branding, Web Design",
+    timeline: "5 weeks",
+    year: "09.26",
+    description:
+      "Solar Energies is on a mission to make clean power feel effortless — from rooftop panels to home battery storage and EV charging. We partnered with the solar-energies.netlify.app team to build a brand and website that make a fully connected energy system feel simple, modern, and trustworthy.",
+    challenge:
+      "Home energy systems are inherently complex — panels, inverters, batteries, chargers, and the grid all working together — and Solar Energies' old presence buried that complexity instead of simplifying it. The brand needed to make an intricate, technical product feel calm, clean, and immediately understandable at a glance.",
+    cover: "/projects/solar-energies/cover.png",
+    logo: "/projects/solar-energies/logo.png",
+    gallery: [
+      "/projects/solar-energies/gallery-1.png",
+      "/projects/solar-energies/gallery-2.png",
+      "/projects/solar-energies/gallery-3.png",
+    ],
+    url: "https://solar-energies.netlify.app/",
+  },
+  {
     slug: "emerald",
     name: "EMERALD",
     code: "08.26",
