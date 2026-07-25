@@ -56,7 +56,18 @@ export default async function ProjectDetailPage({
             </div>
             <div>
               <SectionLabel>Live project</SectionLabel>
-              <p className="mt-2 text-xl font-medium">Preview</p>
+              {project.url ? (
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-block text-xl font-medium underline decoration-1 underline-offset-4 transition-opacity hover:opacity-70"
+                >
+                  Preview
+                </a>
+              ) : (
+                <p className="mt-2 text-xl font-medium">Preview</p>
+              )}
             </div>
           </div>
         </Reveal>

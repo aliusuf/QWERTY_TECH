@@ -10,6 +10,7 @@ export type Project = {
   cover: string;
   logo: string;
   gallery: string[];
+  url?: string;
 };
 
 const CDN = "https://cdn.prod.website-files.com/6904c82b580f53df25dddd39";
@@ -33,24 +34,7 @@ export const projects: Project[] = [
       "/projects/emerald/gallery-2.png",
       "/projects/emerald/gallery-3.png",
     ],
-  },
-  {
-    slug: "things",
-    name: "THINGS®",
-    code: "07.25",
-    scope: "Branding, UI.UX",
-    timeline: "9 Weeks",
-    year: "07.25",
-    description:
-      "Things approached us with a clear goal: grow their market share by 20% in just six months. They weren't after trends or throwaway ideas — they wanted a brand presence that felt fresh and built to last.",
-    challenge: "Global Brand Transformation",
-    cover: `${CDN}/6904ca52320773d95599b79c_690176c806ecd8cec444ce37_work-img-01.png`,
-    logo: `${CDN}/6904ca52320773d95599b767_690176d2c8a030326ce479ac_project-logo-01.svg`,
-    gallery: [
-      `${CDN}/6904ca53320773d95599b7a9_690176f832322b8f62a9ec2e_project-01-img-01.jpeg`,
-      `${CDN}/6904ca52320773d95599b78f_690176fdda5dc7ce05c7664b_project-01-img-02.jpeg`,
-      `${CDN}/6904ca53320773d95599b7ac_69017701660da7ca20cc4606_project-01-img-03.jpeg`,
-    ],
+    url: "https://emeraldsrx.com/",
   },
   {
     slug: "lunar",
