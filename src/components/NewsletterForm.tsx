@@ -29,7 +29,7 @@ export default function NewsletterForm() {
         type="submit"
         className="shrink-0 rounded-full bg-white px-5 py-3 text-sm font-medium text-ink transition-opacity hover:opacity-80"
       >
-        Join
+        Subscribe
       </button>
       {status === "ok" && (
         <p className="absolute mt-14 text-xs text-white/60">

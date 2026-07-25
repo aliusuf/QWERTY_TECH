@@ -14,9 +14,12 @@ export default function ContactPage() {
     <>
       <section className="px-5 pb-16 pt-32 md:px-10 md:pt-40">
         <Reveal>
-          <h1 className="text-4xl md:text-6xl">Get in touch</h1>
+          <h1 className="text-4xl md:text-6xl">
+            Let&rsquo;s make something worth talking about.
+          </h1>
           <p className="mt-4 max-w-md text-body">
-            Got a project in mind? Let&rsquo;s chat and bring it to life.
+            Tell us what you&rsquo;re building. We&rsquo;ll tell you how
+            we&rsquo;d approach it — no obligation, no jargon.
           </p>
         </Reveal>
 
@@ -34,6 +37,14 @@ export default function ContactPage() {
               <a href={`mailto:${SITE_EMAIL}`} className="text-2xl underline underline-offset-4 md:text-3xl">
                 {SITE_EMAIL}
               </a>
+              <p className="text-body">
+                Based in Dubai, UAE.
+                <br />
+                Working with clients across the region and beyond.
+              </p>
+              <p className="text-sm text-slate">
+                We reply to every serious enquiry within one business day.
+              </p>
             </div>
           </Reveal>
           <Reveal delay={0.1}>

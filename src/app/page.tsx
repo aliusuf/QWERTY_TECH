@@ -1,5 +1,5 @@
+import Link from "next/link";
 import HeroMarquee from "@/components/HeroMarquee";
-import PartnersMarquee from "@/components/PartnersMarquee";
 import ServicesSlider from "@/components/ServicesSlider";
 import VideoLightbox from "@/components/VideoLightbox";
 import Reveal from "@/components/Reveal";
@@ -10,12 +10,11 @@ import StatsRow from "@/components/StatsRow";
 import FaqAccordion from "@/components/FaqAccordion";
 import FaqBackground from "@/components/FaqBackground";
 import BlogCard from "@/components/BlogCard";
-import TestimonialCard from "@/components/TestimonialCard";
 import SplitReveal from "@/components/SplitReveal";
 import FadeInText from "@/components/FadeInText";
 import { projects } from "@/data/projects";
 import { posts } from "@/data/blog";
-import { testimonials, reviewImages, socialLinks } from "@/data/site";
+import { socialLinks } from "@/data/site";
 
 export default function Home() {
   return (
@@ -34,6 +33,18 @@ export default function Home() {
           <FadeInText delay={0.6} className="mt-6 max-w-md text-body md:text-lg">
             Creative studio based in Dubai.
           </FadeInText>
+          <FadeInText delay={0.7} className="mt-8 max-w-2xl text-2xl md:text-4xl">
+            Brands that refuse to blend in.
+          </FadeInText>
+          <FadeInText delay={0.8} className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <PillButton href="/contact">Start a project</PillButton>
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-1 text-lg font-medium underline decoration-1 underline-offset-4 transition-opacity hover:opacity-70"
+            >
+              See our work
+            </Link>
+          </FadeInText>
         </div>
 
         <span className="p-mono absolute right-5 top-1/2 hidden -translate-y-1/2 text-slate md:right-8 md:block">
@@ -43,15 +54,15 @@ export default function Home() {
 
       <HeroMarquee />
 
-      {/* Home About + Partners */}
+      {/* Studio intro */}
       <section className="px-5 py-16 md:px-10 md:py-24">
         <Reveal>
           <h2 className="mx-auto max-w-3xl text-center text-3xl md:text-5xl">
-            We&rsquo;re QWERTY TECK® — a Dubai creative studio building bold brands, refined websites, and ideas with the audacity to be unforgettable.
+            We&rsquo;re a creative studio in Dubai for founders and brands
+            who&rsquo;d rather lead than follow. We shape identities,
+            websites, and content that look considered, feel intentional, and
+            are built to last longer than a trend cycle.
           </h2>
-        </Reveal>
-        <Reveal delay={0.1} className="mt-14">
-          <PartnersMarquee />
         </Reveal>
       </section>
 
@@ -60,8 +71,10 @@ export default function Home() {
         <Reveal>
           <div className="mb-10 flex items-end justify-between md:mb-14">
             <div>
-              <SectionLabel>_©25</SectionLabel>
-              <h2 className="mt-3 text-4xl md:text-6xl">Latest Projects.</h2>
+              <SectionLabel>Selected work</SectionLabel>
+              <h2 className="mt-3 text-4xl md:text-6xl">
+                Work we&rsquo;re proud to put our name on.
+              </h2>
             </div>
             <div className="hidden md:block">
               <PillButton href="/projects">See all projects</PillButton>
@@ -84,7 +97,16 @@ export default function Home() {
       <section className="bg-mist px-5 py-20 md:px-10 md:py-32">
         <Reveal>
           <div className="mb-12 flex items-end justify-between md:mb-16">
-            <h2 className="text-4xl md:text-6xl">Services.</h2>
+            <div>
+              <SectionLabel>What we do</SectionLabel>
+              <h2 className="mt-3 text-4xl md:text-6xl">
+                Eight disciplines. One standard.
+              </h2>
+              <p className="mt-4 max-w-md text-body">
+                Everything a brand needs to look sharp and move fast — under
+                one roof, held to one bar.
+              </p>
+            </div>
             <div className="hidden md:block">
               <PillButton href="/contact">Get in touch</PillButton>
             </div>
@@ -103,7 +125,7 @@ export default function Home() {
         <Reveal>
           <h2 className="max-w-3xl text-3xl md:text-5xl">
             QWERTY TECK is a creative studio shaping bold brands and daring
-            ideas.
+            ideas — from Dubai, for anywhere.
           </h2>
         </Reveal>
         <div className="mt-14 grid gap-10 md:grid-cols-2 md:items-center md:gap-16">
@@ -116,41 +138,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="bg-mist px-5 py-8 md:px-10 md:py-16">
-        <Reveal>
-          <div className="mx-auto max-w-[600px] pb-6 text-center">
-            <SectionLabel>TESTIMONIALS</SectionLabel>
-            <h2 className="mt-3 text-4xl md:text-6xl">
-              Trusted by brands who aren&rsquo;t afraid to stand out.
-            </h2>
-          </div>
-        </Reveal>
-        <div className="flex flex-col gap-6">
-          {testimonials.map((t, i) => (
-            <Reveal
-              key={t.name}
-              delay={i * 0.08}
-              className="sticky top-20"
-              style={{ zIndex: i + 1 }}
-            >
-              <TestimonialCard
-                quote={t.quote}
-                name={t.name}
-                role={t.role}
-                image={reviewImages[i]}
-              />
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
       {/* FAQ */}
       <section className="relative px-5 py-16 md:px-10 md:py-24">
         <FaqBackground />
         <div className="grid gap-8 md:grid-cols-2">
           <Reveal>
-            <h2 className="text-4xl md:text-6xl">FAQ.</h2>
+            <SectionLabel>FAQ</SectionLabel>
+            <h2 className="mt-3 text-4xl md:text-6xl">
+              The questions we get asked most.
+            </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <FaqAccordion />
@@ -162,7 +158,10 @@ export default function Home() {
       <section className="bg-mist px-5 py-20 md:px-10 md:py-32">
         <Reveal>
           <div className="mb-12 flex items-end justify-between md:mb-16">
-            <h2 className="text-4xl md:text-6xl">Creative dispatch</h2>
+            <div>
+              <SectionLabel>Creative dispatch</SectionLabel>
+              <h2 className="mt-3 text-4xl md:text-6xl">Ideas worth sharing.</h2>
+            </div>
             <div className="hidden md:block">
               <PillButton href="/contact">Let&rsquo;s Talk</PillButton>
             </div>

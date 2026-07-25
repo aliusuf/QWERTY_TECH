@@ -29,8 +29,11 @@ export default function Footer() {
 
       <div className="flex flex-col gap-10 py-12 md:flex-row md:items-center md:justify-between">
         <div>
-          <p className="text-lg font-medium">Join our newsletter</p>
-          <p className="text-sm text-white/50">Daily dose of design trends by the team.</p>
+          <p className="text-lg font-medium">Join the dispatch</p>
+          <p className="text-sm text-white/50">
+            A considered dose of design thinking, straight from the studio.
+            No noise.
+          </p>
         </div>
         <div className="relative">
           <NewsletterForm />

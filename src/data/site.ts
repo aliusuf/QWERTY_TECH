@@ -1,4 +1,4 @@
-export const SITE_NAME = "QWERTY TECk";
+export const SITE_NAME = "QWERTY TECK";
 export const SITE_EMAIL = "hello@qwertyteck.com";
 
 export const navLinks = [
@@ -15,148 +15,95 @@ export const socialLinks = [
   { label: "X", href: "https://x.com" },
 ];
 
-const PARTNER_CDN = "https://cdn.prod.website-files.com/6904c591abb4bd2b6a67271b";
-export const partnerLogos = [
-  `${PARTNER_CDN}/6904ca7a4abbe56dfff8955f_partner-logo-01.svg`,
-  `${PARTNER_CDN}/6904ca7a4abbe56dfff8955d_partner-logo-02.svg`,
-  `${PARTNER_CDN}/6904ca7a4abbe56dfff8955c_partner-logo-03.svg`,
-  `${PARTNER_CDN}/6904ca7a4abbe56dfff8955e_partner-logo-04.svg`,
-  `${PARTNER_CDN}/6904ca7a4abbe56dfff89562_partner-logo-05.svg`,
-  `${PARTNER_CDN}/6904ca7a4abbe56dfff89560_partner-logo-06.svg`,
-  `${PARTNER_CDN}/6904ca7a4abbe56dfff89563_partner-logo-07.svg`,
-  `${PARTNER_CDN}/6904ca7a4abbe56dfff89561_partner-logo-08.svg`,
-];
-
-export const reviewImages = [
-  `${PARTNER_CDN}/6904ca7a4abbe56dfff8952b_review-img-01.avif`,
-  `${PARTNER_CDN}/6904ca7a4abbe56dfff89543_review-img-02-min.avif`,
-  `${PARTNER_CDN}/6904ca7a4abbe56dfff89537_review-img-03.avif`,
-];
-
 export const services = [
   {
     code: "001",
     title: "BRANDING",
-    description: "We craft logos and brand systems that leave a lasting impression.",
+    description:
+      "We build brands with a backbone — logos, systems, and stories people actually remember. Not decoration. Identity with a point of view.",
   },
   {
     code: "002",
     title: "DEVELOPMENT",
-    description: "Beautiful and functional websites built with purpose and precision.",
+    description:
+      "Websites that are as fast as they are beautiful. Built with purpose, engineered with precision, and made to perform long after launch day.",
   },
   {
     code: "003",
     title: "SEO OPTIMIZATION",
-    description: "Get found faster with tailored SEO strategies backed by real data.",
+    description:
+      "Get found by the people already looking for you. Tailored SEO backed by real data — not guesswork, not jargon.",
   },
   {
     code: "004",
     title: "SOCIAL MEDIA",
-    description: "We plan, post, and grow your brand across every platform with purpose.",
+    description:
+      "We plan, post, and grow your presence across every platform with intent. Content that earns attention instead of chasing it.",
   },
   {
     code: "005",
     title: "UI/UX DESIGN",
-    description: "Intuitive, human-centered interfaces that make every interaction feel effortless.",
+    description:
+      "Intuitive, human-centred interfaces that make every interaction feel effortless — and every visitor feel understood.",
   },
   {
     code: "006",
     title: "GRAPHIC DESIGN",
-    description: "Bold visual assets — from packaging to pitch decks — that carry your brand everywhere.",
+    description:
+      "Bold visual assets — from packaging to pitch decks — that carry your brand everywhere it needs to go, without losing an ounce of quality.",
   },
   {
     code: "007",
     title: "MOTION DESIGN",
-    description: "Animation and video that bring static ideas to life and hold attention longer.",
+    description:
+      "Animation and video that bring static ideas to life, hold attention longer, and make your brand impossible to scroll past.",
   },
   {
     code: "008",
     title: "CONTENT STRATEGY",
-    description: "A clear voice and content plan that keeps your brand consistent at every touchpoint.",
+    description:
+      "A clear voice and a content plan that keeps your brand consistent, confident, and unmistakably you at every touchpoint.",
   },
 ];
 
 export const stats = [
-  { value: "3", suffix: "m+", label: "Capital raised by brands we helped out." },
-  { value: "289", suffix: "", label: "Brands launched through our creative process." },
-  { value: "56", suffix: "", label: "Awards recognizing our branding excellence." },
-  { value: "97", suffix: "%", label: "Client satisfaction rate across all delivered work." },
-];
-
-export const testimonials = [
-  {
-    quote:
-      "Working with QWERTY TECK felt like hiring a creative greenhouse for our ideas. Everything grew faster and brighter than we imagined.",
-    name: "Sarah Conor",
-    role: "Founder, Clonify",
-  },
-  {
-    quote:
-      "Working with QWERTY TECK was a game-changer. They didn't just design our brand — they captured its soul. Everything feels elevated, intentional, and totally us.",
-    name: "Bruce Lee",
-    role: "Design Director, Maiz",
-  },
-  {
-    quote:
-      "From concept to launch, the QWERTY TECK team delivered with clarity, creativity, and style. We've never looked more professional — or more ourselves.",
-    name: "John Headphone",
-    role: "UFO, Marcom",
-  },
+  { label: "Full-service" },
+  { label: "Strategy-first" },
+  { label: "Dubai-based, globally minded" },
+  { label: "One team, start to finish" },
 ];
 
 export const faqs = [
   {
-    q: "What's included in a the monthly package?",
-    a: "Each monthly package includes a set number of design or development hours, dedicated project management, weekly updates, and priority support. We tailor it to fit your needs — whether that's ongoing branding, web updates, or new creative assets.",
+    q: "What's included in a monthly package?",
+    a: "Each retainer includes a set number of design and development hours, a dedicated project lead, weekly progress updates, and priority support. We shape it around what you actually need — ongoing branding, web updates, content, or a mix.",
   },
   {
     q: "How long does a project usually take?",
-    a: "Timelines depend on the scope, but most branding projects take 2–3 weeks, and full website builds range from 3–6 weeks. We'll always give you a clear timeline upfront — and stick to it.",
+    a: "It depends on scope. A focused brand identity typically runs 3–5 weeks; a full website, 6–10 weeks. We'll give you a clear timeline before we start — and we keep to it.",
   },
   {
     q: "Do you offer ongoing support after launch?",
-    a: "Absolutely. We offer ongoing maintenance, design tweaks, updates, and new feature support. Think of us as your creative partner, not just a one-time service.",
+    a: "Yes. Launch is a milestone, not a goodbye. We offer post-launch support and monthly retainers to keep your brand and site evolving as you grow.",
   },
   {
     q: "Can I hire you for just a logo or one-off design?",
-    a: "Yes — we take on one-off projects like logos, pitch decks, or landing pages. If it's a good fit, we're happy to jump in and help.",
+    a: "Absolutely. Not every brand needs the full suite. We take on focused, one-off projects — a logo, a landing page, a pitch deck — with the same standard we bring to everything else.",
   },
   {
     q: "What platforms do you build websites on?",
-    a: "We primarily work with Framer, Webflow, and Shopify — but we're flexible depending on your project needs and tech stack.",
+    a: "We build on the platform that fits your goals — Webflow, WordPress, Shopify, or fully custom. We'll recommend the right one for your team to manage, not just the one that's easiest for us.",
   },
   {
     q: "How do payments work?",
-    a: "For fixed-scope projects, we split payments into 50% upfront and 50% upon completion. For monthly retainers, payments are made at the start of each billing cycle. We accept most major payment methods.",
+    a: "Projects typically begin with a deposit to secure your slot, with the balance tied to agreed milestones. Retainers are billed monthly. Everything is laid out clearly before any work begins — no surprises.",
   },
   {
     q: "What if I'm not happy with the first concept?",
-    a: "No problem — that's part of the process. We include multiple rounds of revisions to ensure you're completely happy with the final result. Your feedback helps us shape it just right.",
+    a: "It happens, and it's part of the process. Every project includes revision rounds, and we treat your feedback as direction, not criticism. We're not done until it's right.",
   },
   {
-    q: "Do you work with clients from any country?",
-    a: "Yes! We work with clients around the world — across time zones, industries, and cultures. Remote collaboration is our default, and we've got it down to a science.",
+    q: "Do you work with clients outside the UAE?",
+    a: "Yes. We're based in Dubai and work with clients across the region and beyond. Time zones haven't stopped good work yet.",
   },
-];
-
-export const team = [
-  { name: "Bruce Lee", role: "Creative Director" },
-  { name: "Sarah Conor", role: "Founder" },
-  { name: "Sarah Silverman", role: "Brand Voice Lead" },
-  { name: "Carl Sagan", role: "Project Manager" },
-  { name: "Pakinam Ahmed", role: "UFO" },
-  { name: "Frodo Baggins", role: "NGO" },
-];
-
-export const awards = [
-  { org: "Designdly", title: "Site of the Day", date: "Apr 2025" },
-  { org: "CodeCanvas", title: "Best UX, UI & Innovation", date: "Mar 2025" },
-  { org: "Sitezy", title: "Best Visual Design", date: "Oct 2024" },
-  { org: "Mocksy", title: "Best Portfolio Website", date: "Aug 2024" },
-  { org: "Uivora", title: "Creator of the Year", date: "Jul 2024" },
-  { org: "DesignDock", title: "People's Choice Gold", date: "May 2024" },
-  { org: "VisualCraft", title: "Web Excellence", date: "Feb 2024" },
-  { org: "Designdly", title: "Honorable Mention", date: "Oct 2023" },
-  { org: "Pigmenta", title: "Gold for Branding", date: "Nov 2023" },
-  { org: "Rankora", title: "Top Creative Agency", date: "Sep 2023" },
 ];

@@ -5,9 +5,9 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "QWERTY TECK— Creative studio based in Dubai.",
+  title: "QWERTY TECK® — Creative studio based in Dubai",
   description:
-    "QWERTY TECK is a creative studio cultivating bold brands, beautiful websites, and ideas that refuse to be ordinary.",
+    "QWERTY TECK is a Dubai creative studio building bold brands, refined websites, and ideas that refuse to be ordinary.",
 };
 
 export default function RootLayout({

@@ -14,13 +14,13 @@ export default function ProjectsPage() {
       <Reveal>
         <div className="flex flex-col gap-8 border-b border-line pb-12 md:flex-row md:items-end md:justify-between">
           <div>
-            <h1 className="text-4xl md:text-6xl">Projects.</h1>
+            <h1 className="text-4xl md:text-6xl">Selected work.</h1>
             <p className="mt-4 max-w-md text-body">
-              Every color, word, and pixel comes from a clear strategy built
+              Every colour, word, and pixel comes from a clear strategy built
               to help you grow.
             </p>
           </div>
-          <PillButton href="/contact">Let&rsquo;s Talk</PillButton>
+          <PillButton href="/contact">Let&rsquo;s talk</PillButton>
         </div>
       </Reveal>
       <Reveal delay={0.1}>
