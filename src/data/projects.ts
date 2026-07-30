@@ -17,10 +17,10 @@ export const projects: Project[] = [
   {
     slug: "crawlnow",
     name: "CRAWLNOW",
-    code: "12.26",
+    code: "06.21",
     scope: "Branding, Dashboard Design",
-    timeline: "8 weeks",
-    year: "12.26",
+    timeline: "3-5 months",
+    year: "06.21",
     description:
       "CrawlNow turns messy web data into something a buyer can actually trust and pay for. We designed the buyer dashboard at the heart of the product — a place to preview scraped datasets before committing, then unlock and purchase the full set the moment it looks right.",
     challenge:
