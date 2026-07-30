@@ -15,6 +15,26 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "repnations",
+    name: "REPNATIONS",
+    code: "11.26",
+    scope: "Branding, E-commerce",
+    timeline: "6 weeks",
+    year: "11.26",
+    description:
+      "Repnations makes elevated activewear for everyday motion — technical, comfortable pieces built for gym sessions and everything after. We partnered with the Repnations team to build a brand and storefront that feel as premium and performance-driven as the gear itself.",
+    challenge:
+      "Activewear is one of the most saturated categories in e-commerce, and most of it looks interchangeable. Repnations needed an identity and shopping experience sharp enough to stand out in a crowded feed, while staying fast and frictionless enough to actually convert browsers into buyers.",
+    cover: "/projects/repnations/cover.png",
+    logo: "/projects/repnations/logo.png",
+    gallery: [
+      "/projects/repnations/gallery-1.png",
+      "/projects/repnations/gallery-2.png",
+      "/projects/repnations/gallery-3.png",
+    ],
+    url: "https://repnations.com/",
+  },
+  {
     slug: "checkmystaff",
     name: "CHECKMYSTAFF",
     code: "10.26",
