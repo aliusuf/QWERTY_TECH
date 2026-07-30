@@ -15,6 +15,26 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "checkmystaff",
+    name: "CHECKMYSTAFF",
+    code: "10.26",
+    scope: "Branding, App Design",
+    timeline: "7 weeks",
+    year: "10.26",
+    description:
+      "CheckMyStaff helps households and small businesses verify domestic staff before they let them through the door — trusted nannies, cooks, and security guards, backed by real employment history instead of a gut feeling. We partnered with the CheckMyPeople team to turn a sensitive vetting process into an app that feels reassuring instead of invasive.",
+    challenge:
+      "Background verification is a trust-first category — the product has to feel secure and credible from the very first screen, or people won't hand over the personal details it needs to work. The challenge was designing an identity and interface calm enough for a worried parent, yet structured enough for an employer managing dozens of staff records at once.",
+    cover: "/projects/checkmystaff/cover.png",
+    logo: "/projects/checkmystaff/logo.png",
+    gallery: [
+      "/projects/checkmystaff/gallery-1.png",
+      "/projects/checkmystaff/gallery-2.png",
+      "/projects/checkmystaff/gallery-3.png",
+    ],
+    url: "https://play.google.com/store/apps/details?id=ng.checkmystaff&pcampaignid=web_share",
+  },
+  {
     slug: "solar-energies",
     name: "SOLAR ENERGIES",
     code: "09.26",
