@@ -74,9 +74,9 @@ export const stats = [
 ];
 
 export const reviewImages = [
-  "/testimonials/reviewer-1.jpg",
-  "/testimonials/reviewer-2.jpg",
   "/testimonials/reviewer-3.jpg",
+  "/testimonials/reviewer-2.jpg",
+  "/testimonials/reviewer-1.jpg",
 ];
 
 export const testimonials = [
@@ -89,14 +89,14 @@ export const testimonials = [
   {
     quote:
       "Working with QWERTY TECK was a game-changer. They didn't just design our brand — they captured its soul. Everything feels elevated, intentional, and totally us.",
-    name: "Bruce Lee",
+    name: "Richard Sterling",
     role: "Design Director, Maiz",
   },
   {
     quote:
       "From concept to launch, the QWERTY TECK team delivered with clarity, creativity, and style. We've never looked more professional — or more ourselves.",
-    name: "John Headphone",
-    role: "UFO, Marcom",
+    name: "Marcus Bellamy",
+    role: "Creative Lead, Marcom Studios",
   },
 ];
 
