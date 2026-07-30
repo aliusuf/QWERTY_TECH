@@ -73,11 +73,10 @@ export const stats = [
   { label: "One team, start to finish" },
 ];
 
-const PARTNER_CDN = "https://cdn.prod.website-files.com/6904c591abb4bd2b6a67271b";
 export const reviewImages = [
-  `${PARTNER_CDN}/6904ca7a4abbe56dfff8952b_review-img-01.avif`,
-  `${PARTNER_CDN}/6904ca7a4abbe56dfff89543_review-img-02-min.avif`,
-  `${PARTNER_CDN}/6904ca7a4abbe56dfff89537_review-img-03.avif`,
+  "/testimonials/reviewer-1.jpg",
+  "/testimonials/reviewer-2.jpg",
+  "/testimonials/reviewer-3.jpg",
 ];
 
 export const testimonials = [
