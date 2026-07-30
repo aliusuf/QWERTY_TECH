@@ -1,9 +1,41 @@
+export type BlogElement =
+  | { kind: "paragraph"; text: string }
+  | { kind: "checklist"; items: string[] }
+  | { kind: "table"; headers: string[]; rows: string[][] }
+  | { kind: "pullquote"; text: string }
+  | {
+      kind: "cta";
+      heading: string;
+      body: string;
+      primaryLabel: string;
+      primaryHref: string;
+      secondaryLabel?: string;
+      secondaryHref?: string;
+    };
+
+export type BlogSection = {
+  id: string;
+  tag?: string;
+  heading: string;
+  elements: BlogElement[];
+};
+
+export type BlogArticle = {
+  lede: string;
+  toc: { id: string; label: string }[];
+  sections: BlogSection[];
+  faq: { q: string; a: string }[];
+  tags: string[];
+};
+
 export type Post = {
   slug: string;
   title: string;
   date: string;
   cover: string;
-  paragraphs: string[];
+  description?: string;
+  paragraphs?: string[];
+  article?: BlogArticle;
 };
 
 const CDN = "https://cdn.prod.website-files.com/6904c82b580f53df25dddd39";
@@ -25,16 +57,169 @@ export const posts: Post[] = [
   },
   {
     slug: "what-good-branding-actually-is-and-what-it-isnt",
-    title: "What good branding actually is (and what it isn't).",
+    title: "4 Things Every Strong Brand Needs Beyond a Logo",
     date: "May 17, 2025",
     cover: `${CDN}/6904f9919192486ae12487df_blog-img-07.png`,
-    paragraphs: [
-      "When people think of branding, the first thing that usually comes to mind is a logo. It's the face of a company, the mark you remember, and often the first thing a customer associates with a business. But strong branding goes far beyond a clever symbol or a clean wordmark.",
-      "A logo might catch someone's eye, but it's the full brand experience that keeps them coming back. From the tone of your messaging to the colors you use, the way your website feels, and how your brand shows up on social media — every detail works together to tell one consistent story.",
-      "What a brand actually needs is a foundation: a clear point of view on who you are, what you stand for, and how you want to be perceived. That includes your voice, your positioning, your values, and your personality — the things a competitor can't simply copy by hiring the same designer.",
-      "Good branding also means consistency. Every touchpoint — your website, a social post, a proposal document, packaging — should feel like it belongs to the same story. A beautiful logo without a system behind it is a book cover with no story inside.",
-      "So if you're thinking about investing in branding, look past the logo. Focus on building the story, the voice, and the experience people will remember — the logo is just where that story happens to start.",
-    ],
+    description:
+      "A logo isn't a brand. Here are the 4 things every strong brand foundation actually needs, how to spot the gaps in yours, and why consistency across every touchpoint is what builds recognition.",
+    article: {
+      lede: "Most founders think branding ends at the logo. It doesn't even start there. A logo is a mark; a brand is everything a customer feels before, during, and after they see it — and mixing the two up is the fastest way to spend money on design that never turns into recognition.",
+      toc: [
+        { id: "what-is-branding", label: "What branding actually means" },
+        { id: "foundation", label: "The four parts of a brand foundation" },
+        { id: "logo-vs-brand", label: "Logo vs. brand: a side-by-side" },
+        { id: "signs", label: "Signs your brand needs more than a logo" },
+        { id: "consistency", label: "Why consistency is the real growth lever" },
+        { id: "process", label: "How a brand foundation actually gets built" },
+        { id: "faq", label: "FAQ" },
+      ],
+      sections: [
+        {
+          id: "what-is-branding",
+          heading: "What Branding Actually Means (It's Not the Logo)",
+          elements: [
+            {
+              kind: "paragraph",
+              text: "When people say \"I need branding,\" what they usually mean is \"I need a logo.\" It's an easy mistake — a logo is the part you can point to. But a logo is only the signature at the bottom of a much longer letter. The letter itself is your [brand strategy](/): the voice, the values, the visual system, and the experience someone has at every single touchpoint.",
+            },
+            {
+              kind: "paragraph",
+              text: "Think of it this way: a logo can get someone to click. Only the brand behind it gets them to stay, trust you with their money, and come back. That distinction is the entire reason branding projects that stop at \"make us a logo\" tend to underperform — there's no foundation holding the mark up.",
+            },
+          ],
+        },
+        {
+          id: "foundation",
+          tag: "(01) The Foundation",
+          heading: "The Four Parts of a Real Brand Foundation",
+          elements: [
+            {
+              kind: "paragraph",
+              text: "Before any visual work starts, a brand needs to answer four questions. Skip these, and even a beautiful logo will feel hollow.",
+            },
+            {
+              kind: "checklist",
+              items: [
+                "**Positioning** — What do you do, for whom, and why you and not the ten competitors doing something similar?",
+                "**Voice** — How do you sound in a caption, an email subject line, or a customer complaint reply? Consistency here is what makes a [brand voice](/blog) recognizable without a logo in sight.",
+                "**Values** — What will you never compromise on, even when it costs you a sale?",
+                "**Personality** — If your brand walked into a room, how would it behave? Loud and playful, or quiet and precise?",
+              ],
+            },
+            {
+              kind: "paragraph",
+              text: "Only once these are locked does the visual system — logo, color, type, imagery — have something real to express. This is also why a [signature visual language](/blog) only works when it's translating a decision that's already been made, not inventing one on the fly.",
+            },
+          ],
+        },
+        {
+          id: "logo-vs-brand",
+          tag: "(02) Comparison",
+          heading: "Logo vs. Brand: What Each One Actually Does",
+          elements: [
+            {
+              kind: "table",
+              headers: ["Question", "A Logo Answers", "A Brand Answers"],
+              rows: [
+                ["First impression", "What do you look like?", "What do you stand for?"],
+                ["Consistency", "Same mark, every file", "Same feeling, every touchpoint"],
+                ["Customer trust", "Recognition", "Loyalty"],
+                ["Lifespan", "Redesigned every few years", "Evolves, rarely restarts"],
+                ["Built by", "A designer, in weeks", "Strategy + design, over months"],
+              ],
+            },
+          ],
+        },
+        {
+          id: "signs",
+          tag: "(03) Diagnosis",
+          heading: "5 Signs Your Brand Needs More Than a Logo Refresh",
+          elements: [
+            {
+              kind: "paragraph",
+              text: "If any of these sound familiar, the fix usually isn't a new logo — it's a brand foundation you never actually built:",
+            },
+            {
+              kind: "checklist",
+              items: [
+                "Your team describes the company differently depending on who's asked",
+                "Your social media, website, and pitch deck all feel like three different companies",
+                "You've redesigned the logo twice in two years, hoping it would \"fix\" something",
+                "Customers can't explain why they chose you over a competitor",
+                "Your content calendar has no consistent voice or point of view",
+              ],
+            },
+            {
+              kind: "pullquote",
+              text: "A beautiful logo without a strong brand system behind it is a book cover without a story inside.",
+            },
+          ],
+        },
+        {
+          id: "consistency",
+          tag: "(04) The Multiplier",
+          heading: "Why Brand Consistency Is the Real Growth Lever",
+          elements: [
+            {
+              kind: "paragraph",
+              text: "Consistency doesn't mean boring. It means your website, your Instagram captions, your packaging, and the way your sales team talks on a call all sound like the same entity. Every one of those is a touchpoint, and every touchpoint is either building recognition or quietly eroding it.",
+            },
+            {
+              kind: "paragraph",
+              text: "This is where most DIY branding falls apart — not in the visuals, but in the follow-through. A studio that treats [brand systems](/) as the actual deliverable (not the logo file) is building something that compounds. Check [our recent work](/projects) to see how that plays out across different industries.",
+            },
+          ],
+        },
+        {
+          id: "process",
+          tag: "(05) Our Approach",
+          heading: "How QWERTY TECK Builds a Brand Foundation",
+          elements: [
+            {
+              kind: "paragraph",
+              text: "Our process starts before a single pixel is placed:",
+            },
+            {
+              kind: "checklist",
+              items: [
+                "Discovery — positioning, audience, and competitive landscape",
+                "Voice & values workshop — turning \"how we feel\" into written guidelines",
+                "Visual system — logo, color, type, and imagery built to express what's already decided",
+                "Touchpoint rollout — website, social, and content, so everything launches in sync",
+              ],
+            },
+            {
+              kind: "cta",
+              heading: "Ready to build a brand that holds up past the logo?",
+              body: "Let's talk through where your brand stands today — and what it actually needs next.",
+              primaryLabel: "Get in Touch",
+              primaryHref: "/contact",
+              secondaryLabel: "See Our Work",
+              secondaryHref: "/projects",
+            },
+          ],
+        },
+      ],
+      faq: [
+        {
+          q: "Is a logo the same thing as a brand?",
+          a: "No. A logo is one visual asset — a brand is the full system of positioning, voice, values, and visuals that the logo represents. You can have a great logo and a weak brand, or a strong brand with a simple mark.",
+        },
+        {
+          q: "How long does building a brand foundation take?",
+          a: "A proper foundation — positioning, voice, and visual system — typically takes several weeks of discovery and workshops before design work begins, longer than a standalone logo project because it involves more stakeholders and decisions.",
+        },
+        {
+          q: "Do I need a full rebrand, or just better consistency?",
+          a: "Often it's the latter. Many brands already have the right pieces — they're just applied inconsistently across the website, social, and sales materials. A brand audit usually reveals which one you actually need.",
+        },
+        {
+          q: "What's the first step if I think my branding is inconsistent?",
+          a: "Start by auditing every touchpoint — website, social bios, email signatures, pitch decks — against a single question: would a stranger know these all belong to the same company? Gaps there point to where the foundation is missing.",
+        },
+      ],
+      tags: ["Branding", "Brand Strategy", "Visual Identity", "Brand Voice"],
+    },
   },
   {
     slug: "building-a-brand-for-dubai",

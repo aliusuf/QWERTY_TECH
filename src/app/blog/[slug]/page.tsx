@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Reveal from "@/components/Reveal";
+import BlogArticleBody from "@/components/BlogArticleBody";
 import { getPost, adjacentPosts, posts } from "@/data/blog";
 
 export function generateStaticParams() {
@@ -16,7 +17,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = getPost(slug);
-  return { title: post ? `${post.title} — QWERTY TECK` : "Blog — QWERTY TECK" };
+  return {
+    title: post ? `${post.title} — QWERTY TECK` : "Blog — QWERTY TECK",
+    description: post?.description,
+  };
 }
 
 export default async function BlogPostPage({
@@ -52,11 +56,13 @@ export default async function BlogPostPage({
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="mx-auto mt-12 flex max-w-2xl flex-col gap-6 text-lg leading-relaxed text-body">
-            {post.paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-          </div>
+          {post.article ? (
+            <BlogArticleBody article={post.article} />
+          ) : (
+            <div className="mx-auto mt-12 flex max-w-2xl flex-col gap-6 text-lg leading-relaxed text-body">
+              {post.paragraphs?.map((p, i) => <p key={i}>{p}</p>)}
+            </div>
+          )}
         </Reveal>
       </article>
 
