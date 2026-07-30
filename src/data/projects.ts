@@ -15,6 +15,26 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "crawlnow",
+    name: "CRAWLNOW",
+    code: "12.26",
+    scope: "Branding, Dashboard Design",
+    timeline: "8 weeks",
+    year: "12.26",
+    description:
+      "CrawlNow turns messy web data into something a buyer can actually trust and pay for. We designed the buyer dashboard at the heart of the product — a place to preview scraped datasets before committing, then unlock and purchase the full set the moment it looks right.",
+    challenge:
+      "Selling data is selling trust — buyers won't pay until they believe the sample reflects the whole set, and every extra click before checkout is a chance for them to walk away. The dashboard had to make previewing feel generous and transparent while still making the full dataset feel worth paying for, and turn 'looks good' into a completed payment in as few steps as possible.",
+    cover: "/projects/crawlnow/cover.png",
+    logo: "/projects/crawlnow/logo.png",
+    gallery: [
+      "/projects/crawlnow/gallery-1.png",
+      "/projects/crawlnow/gallery-2.png",
+      "/projects/crawlnow/gallery-3.png",
+    ],
+    url: "https://www.crawlnow.com/",
+  },
+  {
     slug: "repnations",
     name: "REPNATIONS",
     code: "11.26",
