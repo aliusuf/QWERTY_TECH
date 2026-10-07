@@ -13,6 +13,12 @@
       @pointermove="track"
       @pointerleave="untrack"
     >
+      <NuxtLink class="drum__preview" :to="`/work/${p.slug}`" :aria-label="`View ${p.name} case study`">
+        <img class="drum__cover" :src="p.cover" :alt="`${p.name} project preview`" loading="lazy" decoding="async" width="1600" height="1000" />
+        <span class="drum__brand">
+          <img :src="p.logo" alt="" loading="lazy" decoding="async" />
+        </span>
+      </NuxtLink>
       <!-- the glass tube itself: static, so its highlights never rotate -->
       <div class="drum__tube">
         <div class="drum__type">
@@ -187,6 +193,38 @@ onBeforeUnmount(() => cancelAnimationFrame(raf))
   --cx: 0;
   position: relative;
 }
+
+.drum__preview {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 24px;
+  border-radius: clamp(18px, 3vw, 40px);
+  background: var(--bg-deep);
+}
+.drum__cover {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease);
+}
+.drum__preview:hover .drum__cover { transform: scale(1.025); }
+.drum__preview:focus-visible { outline: 3px solid var(--ink); outline-offset: 5px; }
+.drum__brand {
+  position: absolute;
+  left: clamp(14px, 3vw, 40px);
+  bottom: clamp(14px, 3vw, 40px);
+  width: clamp(110px, 17vw, 220px);
+  height: clamp(48px, 6vw, 80px);
+  display: grid;
+  place-items: center;
+  padding: 12px 18px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(11, 11, 14, 0.1);
+}
+.drum__brand img { width: 100%; height: 100%; min-height: 0; object-fit: contain; }
 
 /* a single piece of glass; the type turns inside it */
 .drum__tube {

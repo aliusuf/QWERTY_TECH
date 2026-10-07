@@ -36,8 +36,17 @@ export default defineNuxtPlugin(() => {
     { passive: true }
   )
 
-  // the intro gate holds the page still until "START"
-  lenis.stop()
+  // Only the homepage intro holds scrolling; case galleries scroll on direct visits too.
+  const route = useRoute()
+  const { entered } = useExperience()
+  watch([() => route.path, entered], ([path, hasEntered]) => {
+    if (path === '/' && !hasEntered) {
+      lenis.stop()
+    } else {
+      document.body.classList.remove('is-locked')
+      lenis.start()
+    }
+  }, { immediate: true })
 
   return {
     provide: { lenis }

@@ -44,6 +44,8 @@ value when its range is entered instead of stamping its start values at creation
 
 ## Content
 
-Project copy lives in the `PROJECTS` array in [components/WorkSection.vue](components/WorkSection.vue);
+Project copy lives in the `PROJECTS` array in [composables/useProjects.ts](composables/useProjects.ts).
+Each project's cover, logo, and three gallery images are served locally from
+`public/projects/<slug>/` and displayed in the work list and matching case page;
 nav items in [components/TheNav.vue](components/TheNav.vue). Colors and type are tokens at the top of
 [assets/css/main.css](assets/css/main.css).

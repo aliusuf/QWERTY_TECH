@@ -11,9 +11,10 @@ export interface Project {
   summary: string
   liveUrl: string
   liveLabel: string
-  /** the project's own cover image, hosted on qwertyteck.com — referenced
-   *  directly rather than copied into this repo */
+  /** Project assets served from public/projects/<slug>. */
   cover: string
+  logo: string
+  gallery: string[]
   /** tints the scrim over the cover image on the case page */
   accent: string
 }
@@ -36,7 +37,6 @@ const PROJECTS: Project[] = [
       'CrawlNow needed to sell trust, not just data. We designed a dashboard that gives buyers a generous preview of each dataset while keeping the full set worth the purchase — shortening the path from first look to checkout so quality sells itself.',
     liveUrl: 'https://www.crawlnow.com/',
     liveLabel: 'View website',
-    cover: 'https://www.qwertyteck.com/projects/crawlnow/cover.png',
     accent: '#4fc3ff'
   },
   {
@@ -51,7 +51,6 @@ const PROJECTS: Project[] = [
       'The activewear category is crowded with near-identical brands. We built an identity and e-commerce experience sharp enough to stand out in a feed, fast enough to convert browsers into buyers, and premium enough to match the product on the rack.',
     liveUrl: 'https://repnations.com/',
     liveLabel: 'View website',
-    cover: 'https://www.qwertyteck.com/projects/repnations/cover.png',
     accent: '#ff4d5e'
   },
   {
@@ -66,7 +65,6 @@ const PROJECTS: Project[] = [
       'Background checks live or die on trust. We designed an interface that feels secure and credible from the very first screen for a worried household, while staying structured enough for an employer managing dozens of staff records — turning a sensitive process into a reassuring one.',
     liveUrl: 'https://play.google.com/store/apps/details?id=ng.checkmystaff&pcampaignid=web_share',
     liveLabel: 'Get the app',
-    cover: 'https://www.qwertyteck.com/projects/checkmystaff/cover.png',
     accent: '#2dd4bf'
   },
   {
@@ -81,7 +79,6 @@ const PROJECTS: Project[] = [
       'Panels, batteries, inverters, chargers, grid — a lot of moving parts to explain without overwhelming a homeowner. We built a modern visual identity that makes an intricate technical product feel immediately understandable, so clean power reads as effortless, not complicated.',
     liveUrl: 'https://solar-energies.netlify.app',
     liveLabel: 'View website',
-    cover: 'https://www.qwertyteck.com/projects/solar-energies/cover.png',
     accent: '#ffb020'
   },
   {
@@ -96,10 +93,14 @@ const PROJECTS: Project[] = [
       'The old identity read like a lab supplier, not a healthcare partner. We built a wordmark and visual language — carried through to packaging and labels — that balances clinical precision with real warmth, giving patients and prescribing physicians confidence at a glance.',
     liveUrl: 'https://emeraldsrx.com',
     liveLabel: 'View website',
-    cover: 'https://www.qwertyteck.com/projects/emerald/cover.png',
     accent: '#12b76a'
   }
-]
+].map((project) => ({
+  ...project,
+  cover: `/projects/${project.slug}/cover.png`,
+  logo: `/projects/${project.slug}/logo.png`,
+  gallery: [1, 2, 3].map((index) => `/projects/${project.slug}/gallery-${index}.png`)
+}))
 
 export const useProjects = () => PROJECTS
 export const useProject = (slug: string) => PROJECTS.find((p) => p.slug === slug)

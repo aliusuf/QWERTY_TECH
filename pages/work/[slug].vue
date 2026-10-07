@@ -1,5 +1,6 @@
 <template>
   <div v-if="project" class="case" :style="{ '--accent': project.accent, '--accent-wash': accentWash }">
+    <section class="case__hero" :aria-label="project.name">
     <!-- the project's own cover shot, tinted with its brand accent so the
          page still reads as one system rather than a bare photo -->
     <div class="case__bg" aria-hidden="true">
@@ -31,6 +32,24 @@
     <ul class="case__tags">
       <li v-for="t in project.tags" :key="t">{{ t }}</li>
     </ul>
+
+    </section>
+
+    <section class="case__gallery" aria-labelledby="gallery-title">
+      <header class="case__gallery-head">
+        <div>
+          <span class="tag">[ A closer look ]</span>
+          <h2 id="gallery-title" class="display">{{ project.name }} in detail</h2>
+        </div>
+        <img class="case__logo" :src="project.logo" :alt="`${project.name} logo`" loading="lazy" />
+      </header>
+      <div class="case__gallery-grid">
+        <figure v-for="(src, i) in project.gallery" :key="src">
+          <img :src="src" :alt="`${project.name} — project image ${i + 1}`" loading="lazy" decoding="async" />
+          <figcaption class="tag">{{ project.name }} / 0{{ i + 1 }}</figcaption>
+        </figure>
+      </div>
+    </section>
 
     <NuxtLink :to="`/work/${next.slug}`" class="case__next">
       <span class="case__next-label">Next work</span>
@@ -89,9 +108,32 @@ onMounted(() => {
 <style scoped>
 .case {
   position: relative;
+  z-index: 2;
+}
+.case__hero {
+  position: relative;
   min-height: 100svh;
   overflow: hidden;
 }
+
+.case__gallery {
+  padding: clamp(48px, 8vw, 120px) clamp(20px, 6vw, 90px);
+  background: var(--bg);
+}
+.case__gallery-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.case__gallery-head h2 { font-size: clamp(30px, 4vw, 64px); line-height: 1.1; margin: 14px 0 0; }
+.case__logo { width: clamp(100px, 18vw, 220px); height: 90px; object-fit: contain; background: #fff; padding: 16px; border-radius: 12px; }
+.case__gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 48px); align-items: start; }
+.case__gallery-grid figure { margin: 0; }
+.case__gallery-grid figure:last-child { grid-column: 1 / -1; }
+.case__gallery-grid img { width: 100%; height: auto; border-radius: 16px; }
+.case__gallery-grid figcaption { padding-top: 14px; }
 
 /* ---------------------------------------------------------------- backdrop */
 .case__bg {
@@ -283,9 +325,9 @@ onMounted(() => {
 
 /* ---------------------------------------------------------------- next */
 .case__next {
-  position: absolute;
-  right: clamp(20px, 6vw, 90px);
-  bottom: clamp(30px, 6vh, 60px);
+  position: relative;
+  padding: 30px clamp(20px, 6vw, 90px) 100px;
+  background: var(--bg);
   z-index: 2;
   display: grid;
   justify-items: end;
@@ -313,13 +355,19 @@ onMounted(() => {
 .case__next:hover .case__next-arrow { transform: translateX(6px); }
 
 @media (max-width: 760px) {
-  /* everything stays absolutely positioned — only the arrangement changes,
-     stacking top-to-bottom instead of the desktop four-corners layout */
-  .case__meta { top: 134px; align-items: flex-start; text-align: left; left: 20px; right: auto; }
+  .case__hero { display: flex; flex-direction: column; gap: 28px; padding: 100px 20px 40px; }
+  .case__back, .case__meta, .case__stage, .case__cta, .case__tags {
+    position: relative; inset: auto;
+  }
+  .case__back { align-self: flex-start; }
+  .case__meta { align-items: flex-start; text-align: left; }
+  .case__stage { margin-top: auto; }
+  .case__cta { align-self: center; transform: none; }
   .case__cta-disc { width: 84px; font-size: 8px; }
-  .case__tags { left: 20px; right: auto; bottom: auto; top: 232px; grid-template-columns: 1fr 1fr; }
-  .case__next { left: 20px; right: auto; bottom: 20px; justify-items: start; text-align: left; }
-  .case__stage { bottom: 156px; }
+  .case__tags { align-self: flex-start; grid-template-columns: 1fr 1fr; }
+  .case__next { justify-items: start; text-align: left; }
   .case__desc { font-size: 12.5px; line-height: 1.5; }
+  .case__gallery-head { align-items: flex-start; flex-direction: column; }
+  .case__gallery-grid { grid-template-columns: 1fr; }
 }
 </style>
