@@ -81,4 +81,13 @@ onMounted(() => {
   margin: 0;
   padding: 0;
 }
+@media (max-width: 760px) {
+  .mani { min-height: 130svh; }
+  .mani__pin { padding: calc(90px + var(--safe-top)) 0 calc(90px + var(--safe-bottom)); }
+  .mani__head { max-width: 17ch; font-size: clamp(26px, 6.8vw, 42px); line-height: 1.12; }
+  .mani__meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .mani__pin { position: relative; padding: 90px 0; }
+}
 </style>

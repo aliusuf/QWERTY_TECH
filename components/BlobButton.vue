@@ -48,12 +48,12 @@ onBeforeUnmount(() => cancelAnimationFrame(raf))
 .hud--br {
   position: fixed;
   z-index: 80;
-  right: clamp(14px, 2vw, 30px);
-  bottom: clamp(14px, 2vw, 26px);
+  right: max(clamp(14px, 2vw, 30px), var(--safe-right));
+  bottom: calc(clamp(14px, 2vw, 26px) + var(--safe-bottom));
 }
 .blob {
   position: relative;
-  width: clamp(42px, 4vw, 54px);
+  width: clamp(48px, 4vw, 54px);
   aspect-ratio: 1;
   display: grid;
   place-items: center;

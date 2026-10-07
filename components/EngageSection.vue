@@ -72,4 +72,9 @@ onMounted(() => {
   text-transform: uppercase;
   font-weight: 700;
 }
+@media (max-width: 760px) {
+  .engage { min-height: 140svh; }
+  .engage__pin { padding-bottom: calc(100px + var(--safe-bottom)); }
+  .engage__copy { font-size: 14px; line-height: 1.6; }
+}
 </style>

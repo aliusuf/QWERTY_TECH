@@ -8,7 +8,7 @@
     <div class="outro__hold">
       <span class="tag outro__q">Got something worth building?</span>
       <HoldButton :duration="1600" @complete="open = true" @progress="onProgress">
-        Click<br />and hold
+        Press<br />and hold
       </HoldButton>
       <span class="tag outro__q outro__q--r">Hold to open</span>
     </div>
@@ -189,4 +189,17 @@ onMounted(() => {
 .outro__socials a { transition: opacity 0.3s; }
 .outro__socials a:hover { opacity: 0.45; }
 .outro__note { opacity: 0.6; }
+@media (max-width: 760px) {
+  .outro { min-height: max(600px, 100svh); padding: 100px 20px calc(110px + var(--safe-bottom)); }
+  .outro__title { font-size: clamp(76px, 23vw, 160px); }
+  .outro__hold { flex-direction: column; gap: 16px; margin-top: 36px; text-align: center; }
+  .outro__q { max-width: none; }
+  .outro__q--r { text-align: center; }
+  .outro__bar { bottom: calc(88px + var(--safe-bottom)); }
+  .outro__reveal { padding: 90px 20px calc(100px + var(--safe-bottom)); text-align: center; }
+  .outro__mail { max-width: 100%; font-size: clamp(22px, 6.7vw, 48px); overflow-wrap: anywhere; }
+  .outro__socials { gap: 4px 16px; }
+  .outro__socials a { display: inline-flex; align-items: center; min-height: 44px; }
+  .outro__note { line-height: 1.8; }
+}
 </style>

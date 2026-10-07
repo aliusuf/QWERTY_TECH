@@ -1,6 +1,6 @@
 <template>
   <div class="hud hud--bl">
-    <button class="sound" :class="{ 'is-on': soundOn }" :aria-pressed="soundOn" @click="toggle">
+    <button class="sound" :class="{ 'is-on': soundOn }" :aria-pressed="soundOn" aria-label="Ambient sound" @click="toggle">
       <span class="sound__wave">
         <i v-for="n in 9" :key="n" :style="{ animationDelay: n * 0.09 + 's' }" />
       </span>
@@ -17,10 +17,11 @@ const { toggle, soundOn } = useAmbience()
 .hud--bl {
   position: fixed;
   z-index: 80;
-  left: clamp(14px, 2vw, 30px);
-  bottom: clamp(14px, 2vw, 26px);
+  left: max(clamp(14px, 2vw, 30px), var(--safe-left));
+  bottom: calc(clamp(14px, 2vw, 26px) + var(--safe-bottom));
 }
 .sound {
+  min-height: 44px;
   display: flex;
   align-items: center;
   gap: 10px;

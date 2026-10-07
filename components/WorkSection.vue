@@ -21,7 +21,8 @@
       </NuxtLink>
       <!-- the glass tube itself: static, so its highlights never rotate -->
       <div class="drum__tube">
-        <div class="drum__type">
+        <h3 class="drum__name">{{ p.name }}</h3>
+        <div class="drum__type" aria-hidden="true">
           <div class="drum__cyl">
             <div v-for="f in FACES" :key="f" class="face" :style="faceTf(f)">
               <span class="face__txt">
@@ -41,8 +42,8 @@
           <p class="drum__desc">{{ p.desc }}</p>
         </div>
 
-        <NuxtLink class="drum__cta" :to="`/work/${p.slug}`">
-          <span>view<br />case</span>
+        <NuxtLink class="drum__cta" :to="`/work/${p.slug}`" :aria-label="`View ${p.name} case study`">
+          <span>view<br /> case</span>
         </NuxtLink>
       </div>
     </article>
@@ -193,6 +194,7 @@ onBeforeUnmount(() => cancelAnimationFrame(raf))
   --cx: 0;
   position: relative;
 }
+.drum__name { display: none; }
 
 .drum__preview {
   position: relative;
@@ -432,20 +434,22 @@ onBeforeUnmount(() => cancelAnimationFrame(raf))
   .drum__desc { display: none; }
   .drum__cta { width: 62px; }
 }
-@media (max-width: 560px) {
-  .drum__tube { height: calc(var(--fh) * 2.2); }
+@media (max-width: 900px) {
+  .work { padding: 64px max(20px, var(--safe-right)) 80px max(20px, var(--safe-left)); gap: 40px; }
+  .work__head { margin-bottom: 0; }
+  .drum__preview { margin-bottom: 12px; }
+  .drum__tube { height: auto; border-radius: 24px; display: grid; gap: 18px; padding: 20px; }
+  .drum__type, .drum__bed, .drum__sheen { display: none; }
+  .drum__name { display: block; margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(26px, 7vw, 38px); line-height: 1.1; overflow-wrap: anywhere; }
   .drum__meta {
-    padding: 0 18px;
-    /* keep the tag column clear of the CTA disc */
-    padding-right: 92px;
-    font-size: 8px;
+    position: static; display: grid; gap: 14px; padding: 0; font-size: 10px; text-shadow: none;
   }
+  .drum__tags { display: flex; flex-wrap: wrap; gap: 8px 14px; }
+  .drum__desc { display: block; font-family: var(--sans); font-size: 14px; line-height: 1.6; letter-spacing: 0; text-transform: none; }
   .drum__cta {
-    width: 58px;
-    right: 14px;
-    font-size: 7px;
-    letter-spacing: 0.12em;
+    position: static; width: 100%; min-height: 48px; aspect-ratio: auto; border-radius: 999px; transform: none; font-size: 10px;
   }
-  .drum__bed { width: 88%; }
+  .drum__cta br { display: none; }
+  .drum__cta span { word-spacing: 0.2em; }
 }
 </style>

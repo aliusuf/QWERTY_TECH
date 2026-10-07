@@ -1,12 +1,12 @@
 <template>
   <div v-if="!entered" class="gate" :class="{ 'is-open': opening }">
     <HoldButton class="gate__btn" :duration="1900" @progress="onProgress" @complete="open">
-      Click<br />and hold
+      Press<br />and hold
     </HoldButton>
 
     <div class="gate__bar">
       <span class="gate__q">Are you ready to step into the future?</span>
-      <span class="gate__q gate__q--r">Click and hold</span>
+      <span class="gate__q gate__q--r">Press and hold</span>
       <i class="gate__track"><b :style="{ transform: `scaleX(${p})` }" /></i>
     </div>
   </div>
@@ -110,7 +110,7 @@ function open() {
   transform-origin: left;
 }
 
-@media (max-width: 640px) {
-  .gate__q { font-size: 12px; max-width: 46%; line-height: 1.15; }
+@media (max-width: 760px), (max-height: 500px) {
+  .gate__bar { display: none; }
 }
 </style>

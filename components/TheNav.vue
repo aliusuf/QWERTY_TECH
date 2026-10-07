@@ -5,7 +5,7 @@
     </a>
     <nav class="nav__links">
       <a v-for="l in links" :key="l.id" :href="'#' + l.id" @click.prevent="go(l.id)">
-        [<span>{{ l.label }}</span>]
+        [<span :class="{ 'nav__label--wide': l.id === 'about' }">{{ l.label }}</span><span v-if="l.id === 'about'" class="nav__label--compact">Agency</span>]
       </a>
     </nav>
   </header>
@@ -40,12 +40,15 @@ const top = () => {
   width: 100%;
   padding: var(--pad) clamp(16px, 2.4vw, 34px);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   mix-blend-mode: multiply;
 }
 
 .nav__logo {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-family: var(--display);
   font-size: clamp(17px, 1.5vw, 23px);
   letter-spacing: 0.02em;
@@ -71,11 +74,25 @@ const top = () => {
   display: inline-block;
   transition: transform 0.4s var(--ease);
 }
+.nav__links a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; justify-content: center; }
 .nav__links a:hover span {
   transform: translateY(-2px) skewX(-8deg);
 }
+.nav__label--compact { display: none !important; }
 
-@media (max-width: 640px) {
-  .nav__links a:nth-child(2) { display: none; }
+@media (max-width: 760px) {
+  .nav {
+    align-items: center;
+    gap: 8px;
+    padding: max(8px, var(--safe-top)) max(12px, var(--safe-right)) 8px max(12px, var(--safe-left));
+    background: rgba(236, 234, 242, 0.92);
+    backdrop-filter: blur(12px);
+    mix-blend-mode: normal;
+  }
+  .nav__logo { display: flex; align-items: center; min-height: 44px; flex-shrink: 0; }
+  .nav__links { gap: 4px; font-size: 10px; letter-spacing: 0.02em; }
+  .nav__links a { display: flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
+  .nav__label--wide { display: none !important; }
+  .nav__label--compact { display: inline-block !important; }
 }
 </style>

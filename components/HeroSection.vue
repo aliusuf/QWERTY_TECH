@@ -217,4 +217,14 @@ onBeforeUnmount(() => cancelAnimationFrame(raf))
   .card:nth-child(5),
   .card:nth-child(8) { display: none; }
 }
+@media (max-width: 760px) {
+  .hero { padding: calc(90px + var(--safe-top)) 20px calc(180px + var(--safe-bottom)); min-height: max(620px, 100svh); }
+  .hero__title { font-size: clamp(76px, 24vw, 160px); }
+  .hero__foot { bottom: calc(90px + var(--safe-bottom)); width: calc(100% - 48px); max-width: 480px; }
+  .hero__foot p { font-size: 13px; line-height: 1.6; }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero { min-height: 620px; }
+  .hero__title { font-size: clamp(76px, 12vw, 110px); }
+}
 </style>

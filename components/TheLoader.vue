@@ -170,4 +170,9 @@ function enter() {
   line-height: 1.8;
   color: var(--ink-60);
 }
+@media (max-width: 760px) {
+  .loader__row { width: calc(100% - 32px); font-size: clamp(24px, 7vw, 48px); gap: 8px; }
+  .loader__start { flex-shrink: 0; }
+  .loader__hint { bottom: calc(32px + var(--safe-bottom)); padding: 0 20px; font-size: 10px; }
+}
 </style>
