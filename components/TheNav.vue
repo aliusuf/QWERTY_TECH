@@ -1,10 +1,17 @@
 <template>
   <header class="nav">
-    <a class="nav__logo" href="#top" @click.prevent="top">
+    <a class="nav__logo" :href="route.path === '/' ? '#top' : '/'" @click.prevent="top">
       Qwerty<em>Teck</em>
     </a>
     <nav class="nav__links">
-      <a v-for="l in links" :key="l.id" :href="'#' + l.id" @click.prevent="go(l.id)">
+      <a
+        v-for="l in links"
+        :key="l.id"
+        :href="l.to || (route.path === '/' ? '#' + l.id : '/#' + l.id)"
+        :class="{ 'is-active': l.to && route.path === l.to }"
+        :aria-current="l.to && route.path === l.to ? 'page' : undefined"
+        @click.prevent="go(l)"
+      >
         [<span :class="{ 'nav__label--wide': l.id === 'about' }">{{ l.label }}</span><span v-if="l.id === 'about'" class="nav__label--compact">Agency</span>]
       </a>
     </nav>
@@ -16,14 +23,16 @@ const { $lenis } = useNuxtApp() as any
 const route = useRoute()
 const links = [
   { id: 'work', label: 'Work' },
+  { id: 'training', label: 'Training', to: '/training' },
   { id: 'about', label: 'Qwerty Agency' },
   { id: 'contact', label: 'Contact' }
 ]
 
 /** off the homepage, an anchor link has to land on "/" first */
-const go = (id: string) => {
-  if (route.path !== '/') return navigateTo('/#' + id)
-  $lenis?.scrollTo('#' + id, { offset: 0, duration: 1.6 })
+const go = (link: (typeof links)[number]) => {
+  if ('to' in link && link.to) return navigateTo(link.to)
+  if (route.path !== '/') return navigateTo('/#' + link.id)
+  $lenis?.scrollTo('#' + link.id, { offset: 0, duration: 1.6 })
 }
 const top = () => {
   if (route.path !== '/') return navigateTo('/')
@@ -78,6 +87,7 @@ const top = () => {
 .nav__links a:hover span {
   transform: translateY(-2px) skewX(-8deg);
 }
+.nav__links a.is-active { color: var(--violet); }
 .nav__label--compact { display: none !important; }
 
 @media (max-width: 760px) {
@@ -94,5 +104,11 @@ const top = () => {
   .nav__links a { display: flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
   .nav__label--wide { display: none !important; }
   .nav__label--compact { display: inline-block !important; }
+}
+@media (max-width: 430px) {
+  .nav { gap: 4px; }
+  .nav__logo em { display: none; }
+  .nav__links { gap: 0; font-size: 8.5px; letter-spacing: 0; }
+  .nav__links a { min-width: 0; padding: 0 4px; }
 }
 </style>
