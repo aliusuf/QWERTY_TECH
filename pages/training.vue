@@ -195,7 +195,7 @@
       <span class="tag">[ Corporate training / customized programs / bulk enrolment ]</span>
       <h2 class="display">Build your team’s<br /><span>excellence.</span></h2>
       <p>Tell us what your team needs. We’ll shape the program around the outcome.</p>
-      <a href="mailto:info@qwertyteck.com">info@qwertyteck.com <span>↗</span></a>
+      <a href="mailto:info@qwertyteck.com">hello@qwertyteck.com <span>↗</span></a>
     </section>
   </main>
 </template>
